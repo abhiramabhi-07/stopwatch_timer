@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS TImer</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="head">
+      <div class="head-l">
+        <img src="images/timer.png" alt="timer" />
+        <h2>Stop Watch</h2>
+      </div>
+      <div class="head-r">
+        <ul>
+          <li>Home</li>
+          <li>Timer</li>
+          <li>Clock</li>
+          <li>Calendar</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-1">
+      <span>Click here for Instructions</span>
+    </div>
+
+    <div class="timer-values">
+      <div class="values">
+        <h2 class="days" id="days">0</h2>
+
+        <p>Days</p>
+      </div>
+      <div class="values">
+        <h2 class="hours" id="hours">0</h2>
+
+        <p>Hours</p>
+      </div>
+      <div class="values">
+        <h2 class="min" id="min">0</h2>
+
+        <p>Minutes</p>
+      </div>
+      <div class="values">
+        <h2 class="sec" id="sec">0</h2>
+
+        <p>Seconds</p>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <div class="input">
+        <input
+          type="text"
+          maxlength="2"
+          placeholder="0"
+          class="input-val"
+          id="days-val"
+          oninput="daysValidate(this)"
+        />
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          maxlength="2"
+          placeholder="0"
+          class="input-val"
+          id="hours-val"
+          oninput="hourValidate(this)"
+        />
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          maxlength="2"
+          placeholder="0"
+          class="input-val"
+          id="min-val"
+        />
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          maxlength="2"
+          placeholder="0"
+          class="input-val"
+          id="sec-val"
+        />
+      </div>
+    </div>
+
+    <div class="buttons">
+      <div class="btn-wrapper">
+        <button id="set-timer" onclick="startTimer()">Set Timer</button>
+        <button id="pause">Pause</button>
+        <button id="start-resume" onclick="resumeTimer()">
+          Start / Resume
+        </button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <span>Instructions</span><br />
+      1. Enter the values in the input. <br />
+      2. Press the Start/Resume Button to start the timer.<br />
+      3. Pause the Timer if you want to pause.<br />
+      4. Press Start/Resume button to resume the timer.<br />
+      5. Press the Reset Button to reset the values.
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
